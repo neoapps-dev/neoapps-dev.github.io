@@ -68,6 +68,68 @@
                         actually works (maybe). ♡
                     </p>
                 </div>
+                <div class="presence-card" id="discord-presence">
+                    <div class="presence-avatar-wrap">
+                        <img
+                            id="presence-avatar"
+                            class="presence-avatar"
+                            alt=""
+                        />
+                        <span
+                            id="presence-dot"
+                            class="status-dot offline"
+                        ></span>
+                    </div>
+                    <div class="presence-body">
+                        <div class="presence-top">
+                            <span class="presence-name" id="presence-name"
+                                >connecting…</span
+                            >
+                            <span class="presence-tag">discord</span>
+                        </div>
+                        <div
+                            class="presence-status-line"
+                            id="presence-status-text"
+                        ></div>
+                        <div
+                            class="presence-custom"
+                            id="presence-custom"
+                            hidden
+                        ></div>
+                        <a
+                            class="presence-spotify"
+                            id="presence-spotify"
+                            target="_blank"
+                            rel="noopener"
+                            hidden
+                        ></a>
+                        <div
+                            class="presence-activities"
+                            id="presence-activities"
+                        ></div>
+                    </div>
+                </div>
+                <div class="clock-card" id="clock-card">
+                    <div class="presence-top">
+                        <span class="presence-tag"
+                            ><i data-lucide="clock-3"></i> my time</span
+                        >
+                        <span class="clock-icon-wrap" id="clock-sun"
+                            ><i data-lucide="sun"></i
+                        ></span>
+                        <span class="clock-icon-wrap" id="clock-moon" hidden
+                            ><i data-lucide="moon"></i
+                        ></span>
+                    </div>
+                    <div class="clock-time trans-name" id="clock-time">
+                        --:--:--
+                    </div>
+                    <div class="clock-sub" id="clock-sub"></div>
+                    <div class="day-bar">
+                        <span id="clock-day-bar"></span>
+                    </div>
+                    <div class="clock-status" id="clock-status"></div>
+                </div>
             </div>
         </section>
         <section class="gallery" id="gallery">

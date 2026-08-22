@@ -271,6 +271,315 @@ section {
     max-width: 480px;
 }
 
+[hidden] {
+    display: none !important;
+}
+
+.presence-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.1rem;
+    margin-top: 2rem;
+    max-width: 560px;
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    padding: 1.25rem;
+    transition:
+        border-color 0.15s,
+        box-shadow 0.15s;
+}
+
+.presence-card:hover {
+    border-color: var(--card-hover-border);
+    box-shadow: 0 0 20px rgba(124, 58, 237, 0.15);
+}
+
+.presence-avatar-wrap {
+    position: relative;
+    flex-shrink: 0;
+    width: 72px;
+    height: 72px;
+}
+
+.presence-avatar {
+    width: 72px;
+    height: 72px;
+    object-fit: cover;
+    display: block;
+    background: var(--purple-mid);
+    border: 1px solid var(--card-border);
+}
+
+.status-dot {
+    position: absolute;
+    bottom: -4px;
+    right: -4px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 3px solid var(--purple-deep);
+}
+
+.status-dot.online {
+    background: #23a55a;
+}
+
+.status-dot.idle {
+    background: #f0b232;
+}
+
+.status-dot.dnd {
+    background: #f23f43;
+}
+
+.status-dot.offline {
+    background: #747f8d;
+}
+
+.presence-body {
+    flex: 1;
+    min-width: 0;
+}
+
+.presence-top {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 0.5rem;
+}
+
+.presence-name {
+    font-weight: 700;
+    font-size: 1.2rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.presence-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    color: var(--text-muted);
+    font-size: 0.78rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    flex-shrink: 0;
+}
+
+.presence-status-line {
+    font-size: 1rem;
+    color: var(--text-muted);
+    margin-top: 0.2rem;
+}
+
+.presence-custom {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.98rem;
+    margin-top: 0.5rem;
+    line-height: 1.3;
+    overflow-wrap: anywhere;
+}
+
+.presence-custom img,
+.presence-custom .emoji-fallback {
+    width: 1.05em;
+    height: 1.05em;
+    flex-shrink: 0;
+}
+
+.presence-spotify {
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
+    margin-top: 0.75rem;
+    padding: 0.65rem;
+    background: rgba(45, 0, 80, 0.55);
+    border: 1px solid var(--card-border);
+    text-decoration: none;
+    color: var(--text-main);
+    transition: border-color 0.15s;
+}
+
+.presence-spotify:hover {
+    border-color: rgba(29, 185, 84, 0.6);
+}
+
+.spotify-art {
+    width: 56px;
+    height: 56px;
+    object-fit: cover;
+    flex-shrink: 0;
+    border: 1px solid var(--card-border);
+}
+
+.spotify-meta {
+    min-width: 0;
+    flex: 1;
+}
+
+.spotify-title {
+    font-weight: 600;
+    font-size: 1rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.spotify-sub {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.spotify-bar {
+    height: 4px;
+    background: rgba(168, 85, 247, 0.25);
+    margin-top: 0.5rem;
+    overflow: hidden;
+}
+
+.spotify-bar span {
+    display: block;
+    height: 100%;
+    width: 0%;
+    background: #1db954;
+    transition: width 1s linear;
+}
+
+.spotify-times {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.78rem;
+    color: var(--text-muted);
+    margin-top: 0.3rem;
+    font-variant-numeric: tabular-nums;
+}
+
+.presence-activities {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+    margin-top: 0.75rem;
+}
+
+.activity {
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
+    padding: 0.65rem;
+    background: rgba(45, 0, 80, 0.55);
+    border: 1px solid var(--card-border);
+}
+
+.activity img {
+    width: 56px;
+    height: 56px;
+    object-fit: cover;
+    flex-shrink: 0;
+    border: 1px solid var(--card-border);
+}
+
+.activity-meta {
+    min-width: 0;
+    flex: 1;
+}
+
+.activity-label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--trans-pink);
+    font-weight: 600;
+}
+
+.activity-name {
+    font-weight: 600;
+    font-size: 1.05rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.activity-detail {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.activity-time {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    font-variant-numeric: tabular-nums;
+    margin-top: 0.1rem;
+}
+
+.clock-card {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    padding: 1.25rem;
+    flex: 1 1 320px;
+    max-width: 560px;
+    transition:
+        border-color 0.15s,
+        box-shadow 0.15s;
+}
+
+.clock-card:hover {
+    border-color: var(--card-hover-border);
+    box-shadow: 0 0 20px rgba(124, 58, 237, 0.15);
+}
+
+.clock-icon-wrap {
+    color: var(--text-muted);
+    display: inline-flex;
+    align-items: center;
+    font-size: 1.25rem;
+}
+
+.clock-time {
+    font-size: 2.6rem;
+    font-weight: 900;
+    letter-spacing: -0.02em;
+    line-height: 1.15;
+    margin-top: 0.35rem;
+    font-variant-numeric: tabular-nums;
+}
+
+.clock-sub {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    margin-top: 0.2rem;
+}
+
+.day-bar {
+    height: 4px;
+    background: rgba(168, 85, 247, 0.25);
+    margin-top: 0.75rem;
+    overflow: hidden;
+}
+
+.day-bar span {
+    display: block;
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, var(--purple-bright), var(--trans-pink));
+    transition: width 1s linear;
+}
+
+.clock-status {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-top: 0.5rem;
+}
+
 .lucide {
     width: 1em;
     height: 1em;
@@ -398,6 +707,14 @@ footer a:hover {
 
     .bio {
         margin: 0 auto;
+    }
+
+    .presence-card {
+        max-width: none;
+    }
+
+    .clock-card {
+        max-width: none;
     }
 
     .gallery-grid {
