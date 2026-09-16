@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>neoapps :3</title>
+        <meta
+            name="description"
+            content="h"
+        />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;900&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="style.css" />
+    </head>
+
+    <body>
+        <canvas id="bg-canvas"></canvas>
+        <header>
+            <div class="header-inner">
+                <div class="nav-logo">neo!!! :3</div>
+                <nav>
+                    <a href="#about">about</a>
+                    <a href="#gallery">gallery</a>
+                    <a href="#contact">contact</a>
+                </nav>
+            </div>
+        </header>
+        <section class="hero" id="about">
+            <div class="hero-content">
+                <div class="pfp-wrap">
+                    <img
+                        src="https://github.com/neoapps-dev.png"
+                        alt="my pfp lol"
+                        class="pfp"
+                    />
+                </div>
+                <div class="hero-text">
+                    <h1 class="name">
+                        hi, i'm neo
+                    </h1>
+                    <p class="tagline">
+                        just a person who makes
+                        things better than Microsoft
+                    </p>
+                    <div class="badges">
+                        <span class="badge"
+                            ><i data-lucide="terminal"></i> GNU/Linux</span
+                        >
+                        <span class="badge">she/her</span>
+                    </div>
+                    <p class="bio">
+                        i'm a developer
+                        passionate about building weird cool stuff<br />
+                        i love C++, hate bloat, and try to make software that
+                        actually works (maybe). :3
+                    </p>
+                </div>
+                <div class="presence-card" id="discord-presence">
+                    <div class="presence-avatar-wrap">
+                        <img
+                            id="presence-avatar"
+                            class="presence-avatar"
+                            alt=""
+                        />
+                        <span
+                            id="presence-dot"
+                            class="status-dot offline"
+                        ></span>
+                    </div>
+                    <div class="presence-body">
+                        <div class="presence-top">
+                            <span class="presence-name" id="presence-name"
+                                >connecting…</span
+                            >
+                            <span class="presence-tag">discord</span>
+                        </div>
+                        <div
+                            class="presence-status-line"
+                            id="presence-status-text"
+                        ></div>
+                        <div
+                            class="presence-custom"
+                            id="presence-custom"
+                            hidden
+                        ></div>
+                        <a
+                            class="presence-spotify"
+                            id="presence-spotify"
+                            target="_blank"
+                            rel="noopener"
+                            hidden
+                        ></a>
+                        <div
+                            class="presence-activities"
+                            id="presence-activities"
+                        ></div>
+                    </div>
+                </div>
+                <div class="clock-card" id="clock-card">
+                    <div class="presence-top">
+                        <span class="presence-tag"
+                            ><i data-lucide="clock-3"></i> my time</span
+                        >
+                        <span class="clock-icon-wrap" id="clock-sun"
+                            ><i data-lucide="sun"></i
+                        ></span>
+                        <span class="clock-icon-wrap" id="clock-moon" hidden
+                            ><i data-lucide="moon"></i
+                        ></span>
+                    </div>
+                    <div class="clock-time" id="clock-time">
+                        --:--:--
+                    </div>
+                    <div class="clock-sub" id="clock-sub"></div>
+                    <div class="day-bar">
+                        <span id="clock-day-bar"></span>
+                    </div>
+                    <div class="clock-status" id="clock-status"></div>
+                </div>
+            </div>
+        </section>
+        <section class="gallery" id="gallery">
+            <h2 class="section-title">
+                <i data-lucide="layout-grid"></i> stuff
+            </h2>
+            <div class="gallery-grid">
+                <div class="ph-item">
+                    <a href="https://obsidianos.xyz"
+                        ><img
+                            src="https://obsidianos.xyz/logo.png"
+                            alt="obsidianos"
+                    /></a>
+                </div>
+                <div class="ph-item">
+                    <a href="https://null.obsidianos.xyz"
+                        ><img
+                            width="312"
+                            src="https://null.obsidianos.xyz/logo.png"
+                            alt="obsidianos"
+                    /></a>
+                </div>
+                <div class="ph-item">
+                    <a href="https://github.com/LumoraLang/Lumora"
+                        ><img
+                            width="312"
+                            src="https://github.com/LumoraLang.png"
+                            alt="lumora"
+                    /></a>
+                </div>
+                <div class="ph-item">
+                    <a href="https://github.com/LCE-Hub"
+                        ><img
+                            width="312"
+                            src="https://github.com/LCE-Hub.png"
+                            alt="lcehub"
+                    /></a>
+                </div>
+                <div class="ph-item">
+                    <a href="https://neolegacy.dev"
+                        ><img
+                            width="312"
+                            src="https://github.com/neoStudiosLCE.png"
+                            alt="neolegacy"
+                    /></a>
+                </div>
+                <div class="ph-item">
+                    <a href="https://github.com/Markdownium/Markdownium"
+                        ><img
+                            width="312"
+                            src="https://github.com/Markdownium.png"
+                            alt="markdownium"
+                    /></a>
+                </div>
+            </div>
+        </section>
+        <section class="contact" id="contact">
+            <h2 class="section-title"><i data-lucide="mail"></i> find me ig</h2>
+            <div class="links-grid">
+                <a
+                    class="link-card"
+                    href="https://linktr.ee/_neo__"
+                    target="_blank"
+                    rel="noopener"
+                >
+                    <span class="link-icon"><i data-lucide="link-2"></i></span>
+                    <span>Linktree</span>
+                </a>
+                <a
+                    class="link-card"
+                    href="https://bsky.app/profile/neo.obsidianos.xyz"
+                    target="_blank"
+                    rel="noopener"
+                >
+                    <span class="link-icon"><i data-lucide="cloud"></i></span>
+                    <span>Bluesky</span>
+                </a>
+                <a
+                    class="link-card"
+                    href="https://youtube.com/@neoapps-dev"
+                    target="_blank"
+                    rel="noopener"
+                >
+                    <span class="link-icon"
+                        ><i data-lucide="play-circle"></i
+                    ></span>
+                    <span>YouTube</span>
+                </a>
+                <a
+                    class="link-card"
+                    href="https://discord.com/users/962311614680412181"
+                    target="_blank"
+                    rel="noopener"
+                >
+                    <span class="link-icon"
+                        ><i data-lucide="message-square"></i
+                    ></span>
+                    <span>Discord</span>
+                </a>
+                <a class="link-card" href="mailto:neo@obsidianos.xyz">
+                    <span class="link-icon"><i data-lucide="at-sign"></i></span>
+                    <span>neo@obsidianos.xyz</span>
+                </a>
+            </div>
+        </section>
+
+        <footer>
+            <p>
+                made with <i data-lucide="heart" class="footer-heart"></i> by
+                neo<br /><a
+                    href="https://github.com/neoapps-dev"
+                    target="_blank"
+                    rel="noopener"
+                    >github</a
+                >
+            </p>
+        </footer>
+        <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+        <script src="script.js"></script>
+        <script>
+            lucide.createIcons();
+        </script>
+    </body>
+</html>
